@@ -1,0 +1,10 @@
+print("este algoritmo calcula la mitad de un numero ingresado y determina si es mayor o menor a 100")
+
+mitad = float(input("escriba el numero: ")) 
+resultado = mitad / 2 
+print("la mitad de el numero indicado es" + " "+ str(resultado))
+if resultado > 100 :
+    print ("la mitad del numero indicado es mayor que 100"  )
+        
+else:
+    print ("la mitad del numero indicado es  menor que 100"  )
