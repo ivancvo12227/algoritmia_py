@@ -2,4 +2,4 @@ print ("este es un algoritmo  que calcula la distancia de un movimiento rectilin
 velocidad = float(input("digite la velocidad a la que se mueve el objeto km/h: "))
 tiempo = float(input("digite la cantidad de horas que el objeto estuvo en movimiento: "))
 distancia =(velocidad * tiempo)
-print("la distancia que recorrio el objeto en km es: " + str(distancia))
+print("la distancia que recorrio el objeto es de: " + str(distancia)+" "+ "km")
