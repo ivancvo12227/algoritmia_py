@@ -1,0 +1,8 @@
+print("este algoritmo realiza la suma o resta de 2 numeros. Dependiendo si los numeros son iguales se restan  pero si son diferentes se suman ")
+ 
+num1 = int(input("digite el primer numero: "))
+num2 = int(input("digite el segundo numero: "))
+if num1 == num2:
+    print(num1 - num2)
+else:
+    print(num1 + num2 )
