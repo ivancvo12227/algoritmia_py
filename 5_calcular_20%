@@ -1,0 +1,5 @@
+print("este algoritmo calcula el 20 porciento de cualquier numero digitado")
+numero = float(input("digite el numero que desea: "))
+porcen = (numero * 0.2)
+print ("el porcentaje de" +" " +  str(numero) +  " " + "es" + " " +  str(porcen) )
+print( "gracias por participar")
