@@ -1,0 +1,6 @@
+print("este es un algoritmo que permite multiplicar 3 numeros")
+
+multi = int(input("digite el primer numero: "))
+multi2 = int(input("digite el segundo numero: "))
+multi3 = int(input("digite el tercer numero: "))
+print("su resultado es:" + str (multi * multi2 * multi3 ))
