@@ -1,0 +1,6 @@
+print("este algoritmo calcula si el numero ingresado por el usuarios es positivo o negativo")
+num = float(input("ingrse el numero a calcular:"))
+if num > 0 :
+    print("su numero es positivo")
+else:
+    print("su numero es negativo")
