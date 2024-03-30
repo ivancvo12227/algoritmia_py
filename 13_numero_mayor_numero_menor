@@ -1,0 +1,7 @@
+print("este programa muestra que numero ingresadp por el usuario es mayor")
+numMA= float(input("ingrese el primer numero: "))
+numME = float(input("ingrese el segundo numero: "))
+if numMA > numME:
+    print("El mayor de los dos es: " + str(numMA))
+else:
+    print ("El mayor de los 2 es: " + str (numME))
