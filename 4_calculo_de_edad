@@ -1,0 +1,5 @@
+print ("este algoritmo calcula la edad de una persona solo conociendo el año actual y el año de nacimiento")
+año_ac = int(input("digite el año actual: "))
+año_nc = int(input("digite su año de nacimiento "))
+edad = año_ac - año_nc
+print("usted tiene " + str (edad)+ " " + "años de edad")
