@@ -1,0 +1,9 @@
+print("este algoritmo calcula si es mayor de edad  o no ")
+año_ac = int(input("digite el año actual: "))
+año_nc = int(input("digite su año de nacimiento "))
+edad = año_ac - año_nc
+print("usted tiene " + str (edad)+ " " + "años de edad")
+if edad >= 18:
+    print("usted es mayor de edad")
+else:
+    print("usted no es mayor de edad")
