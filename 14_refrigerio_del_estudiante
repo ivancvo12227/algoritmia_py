@@ -1,0 +1,8 @@
+print("este programa dice si el estudiante x tiene derecho a recibir refrigerio ") #se tiene en cuenta que la secretaria dispone de refrigerio
+#para los estudiantes de grado inferior a sexto
+nombre = input("ingrese su nombre:")
+grado = int(input("escriba el grado que esta cursando: "))
+if grado <= 6:
+    print("el estudiante "+ " " + nombre +" " +  " Puede recibir su refrigerio")
+else:
+    print("el estudiante "+ " " + nombre +" " + " NO puede recibir su refrigerio")
