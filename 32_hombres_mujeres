@@ -1,0 +1,24 @@
+print("este programa muestra cuantos estudiantes son hombres y cuantos mujeres")
+# Definimos la cantidad de estudiantes
+numero_estudiantes = 25
+
+
+hombres = 0
+mujeres = 0
+
+
+for i in range(numero_estudiantes):
+  # Preguntamos el género del estudiante
+  genero = input("Ingrese el género del estudiante (H/M): ").upper() #el upper pone las letras en mayusculas
+
+  
+
+  # Contamos según el género
+  if genero == "H":
+    hombres += 1
+  else:
+    mujeres += 1
+
+# Imprimimos los resultados
+print(f"Hombres: {hombres}")
+print(f"Mujeres: {mujeres}")
