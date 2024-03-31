@@ -1,0 +1,13 @@
+print("este algoritmo identifica si una letra es vocal o consonante")
+
+def es_vocal(letra):
+ 
+  vocales = "aeiou"
+  return letra.lower() in vocales
+
+letra = input("Ingrese una letra: ")
+
+if es_vocal(letra):
+  print(f"La letra '{letra}' es una vocal.")
+else:
+  print(f"La letra '{letra}' es una consonante.")
