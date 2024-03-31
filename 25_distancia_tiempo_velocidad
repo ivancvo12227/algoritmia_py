@@ -1,0 +1,38 @@
+def calcular_distancia(tiempo, velocidad):
+  
+  return tiempo * velocidad * 1000 / 60
+
+def calcular_tiempo(distancia, velocidad):
+ 
+  return distancia / (velocidad * 1000 / 60)
+
+def calcular_velocidad(distancia, tiempo):
+ 
+  return distancia / (tiempo * 1000 / 60)
+
+# Opción 1: Pedir datos al usuario
+
+while True:
+  try:
+    opcion = int(input("Seleccione una opción (1, 2 o 3): "))
+    if opcion not in (1, 2, 3):
+      raise ValueError
+    break
+  except ValueError:
+    print("Opción no válida. Ingrese un número entre 1 y 3.")
+
+if opcion == 1:
+  tiempo = float(input("Ingrese el tiempo en minutos: "))
+  velocidad = float(input("Ingrese la velocidad en km/h: "))
+  distancia = calcular_distancia(tiempo, velocidad)
+  print(f"Distancia recorrida: {distancia:.2f} metros")
+elif opcion == 2:
+  distancia = float(input("Ingrese la distancia recorrida en metros: "))
+  velocidad = float(input("Ingrese la velocidad en km/h: "))
+  tiempo = calcular_tiempo(distancia, velocidad)
+  print(f"Tiempo en movimiento: {tiempo:.2f} minutos")
+else:
+  distancia = float(input("Ingrese la distancia recorrida en metros: "))
+  tiempo = float(input("Ingrese el tiempo en movimiento: "))
+  velocidad = calcular_velocidad(distancia, tiempo)
+  print(f"Velocidad: {velocidad:.2f} km/h")
