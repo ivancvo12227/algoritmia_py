@@ -1,0 +1,17 @@
+print("este programa determina cuantos alumnos son mayores edad")
+# Definir la cantidad de estudiantes
+estudiantes = 20
+
+# ponemos la variable de los ,ayores de edad en 0 
+mayores_edad = 0
+
+# Pedimos la edad de cada estudiante
+for i in range(estudiantes):
+  edad = int(input(f"Ingrese la edad del estudiante {i + 1}: "))
+  
+  # Si el estudiante es mayor de edad, se aumenta el contador en 1
+  if edad >= 18:
+    mayores_edad += 1
+
+# Mostrar el resultado
+print(f"Hay {mayores_edad} estudiantes mayores de edad en el grupo.")
