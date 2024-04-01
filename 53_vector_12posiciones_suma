@@ -1,0 +1,17 @@
+print("este programa se trata de sumar todos los valores ingresados por el usuario")
+
+# Definir un vector de 12 posiciones
+vec = [0] * 12
+
+# Solicitar los valores al usuario
+for i in range(12):
+    nums = int(input("Ingrese un numero a sumar " + str(i + 1) + ": "))
+    vec[i] = nums
+
+# Sumar todos los valores del vector
+suma = 0
+for nums in vec:
+    suma += nums
+
+# Mostrar el resultado
+print("La suma de todos los valores es:", suma)
