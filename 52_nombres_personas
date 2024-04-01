@@ -1,0 +1,13 @@
+print("este algoritmo se trada de almacenar los nombres de 15 de personas en un vector")
+# Crear una lista para almacenar las edades
+nombres = [0] * 15
+
+# Solicitar las edades al usuario
+for i in range(15):
+    persona = (input("Ingrese el nombre de la persona " + str(i + 1) + ": "))
+    nombres[i] = persona
+
+# Mostrar las edades ingresadas
+print("\nNombres ingresados: ")
+for i in range(15):
+    print("nombre de la persona " + str(i + 1) + ": " + str(nombres[i]))
