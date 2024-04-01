@@ -1,0 +1,32 @@
+print("este programa es una matriz capaz de mostras los datos ingresados y su respectiva posicion")
+
+def mostrar_matriz(matriz):
+  
+  filas = len(matriz)
+  columnas = len(matriz[0])
+  
+  for i in range(filas):
+    for j in range(columnas):
+      print(f"({i}, {j}): {matriz[i][j]}", end=" ")
+    print()
+
+def main():
+ 
+  # Definir el tamaño de la matriz
+  filas = int(input("Ingrese el número de filas: "))
+  columnas = int(input("Ingrese el número de columnas: "))
+
+  # Crear una matriz vacía
+  matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
+
+  # Llenar la matriz con valores ingresados por el usuario
+  for i in range(filas):
+    for j in range(columnas):
+      valor = input(f"Ingrese el valor para la posición ({i}, {j}): ")
+      matriz[i][j] = valor
+
+  # Mostrar la matriz en pantalla
+  mostrar_matriz(matriz)
+
+if __name__ == "__main__":
+  main()
