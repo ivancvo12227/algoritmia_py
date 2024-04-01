@@ -1,0 +1,70 @@
+print("este programa es de una matriz que saca los numeros positivos negativos y los ceros")
+
+def mostrar_valor(matriz, filas, columnas):
+
+  while True:
+    try:
+      # Solicitar la fila y columna
+      fila = int(input("Ingrese la fila (1-{} ): ".format(filas)))
+      columna = int(input("Ingrese la columna (1-{} ): ".format(columnas)))
+
+      # Validar la fila y columna
+      if 1 <= fila <= filas and 1 <= columna <= columnas:
+        # Mostrar el valor
+        valor = matriz[fila - 1][columna - 1]
+        print(f"El valor en la posición ({fila}, {columna}) es: {valor}")
+        break
+      else:
+        print("Posición fuera de rango. Intente de nuevo.")
+    except ValueError:
+      print("Valor inválido. Ingrese un número entero.")
+
+def main():
+ 
+  # Solicitar el número de filas y columnas
+  while True:
+    try:
+      filas = int(input("Ingrese el número de filas: "))
+      columnas = int(input("Ingrese el número de columnas: "))
+      if filas > 0 and columnas > 0:
+        break
+      else:
+        print("Las filas y columnas deben ser números positivos.")
+    except ValueError:
+      print("Valor inválido. Ingrese un número entero.")
+
+  # Crear una matriz vacía
+  matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
+
+  # Contadores
+  positivos = []
+  negativos = []
+  ceros = []
+
+  # Llenar la matriz con valores ingresados por el usuario
+  for i in range(filas):
+    for j in range(columnas):
+      while True:
+        try:
+          valor = int(input(f"Ingrese el valor para la posición ({i}, {j}): "))
+          break
+        except ValueError:
+          print("Valor inválido. Ingrese un número entero.")
+
+      matriz[i][j] = valor
+
+      # Contar positivos, negativos y ceros y almacenar las posiciones
+      if valor > 0:
+        positivos.append((i, j))
+      elif valor < 0:
+        negativos.append((i, j))
+      else:
+        ceros.append((i, j))
+
+  # Mostrar resultados
+  print(f"Positivos ({len(positivos)}):", positivos)
+  print(f"Negativos ({len(negativos)}):", negativos)
+  print(f"Ceros ({len(ceros)}):", ceros)
+
+if __name__ == "__main__":
+  main()
