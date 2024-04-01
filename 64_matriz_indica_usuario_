@@ -1,0 +1,40 @@
+print("este programa permite llenar la matiz con el numero de columnas y filas que el usuario necesite ")
+def mostrar_valor(matriz, filas, columnas):
+
+  while True:
+    try:
+      # Solicitar la fila y columna
+      fila = int(input("Ingrese la fila (1-{} ): ".format(filas)))
+      columna = int(input("Ingrese la columna (1-{} ): ".format(columnas)))
+
+      # Validar la fila y columna
+      if 1 <= fila <= filas and 1 <= columna <= columnas:
+        # Mostrar el valor
+        valor = matriz[fila - 1][columna - 1]
+        print(f"El valor en la posición ({fila}, {columna}) es: {valor}")
+        break
+      else:
+        print("Posición fuera de rango. Intente de nuevo.")
+    except ValueError:
+      print("Valor inválido. Ingrese un número entero.")
+
+def main():
+ 
+  # Solicitar el número de filas y columnas
+  filas = int(input("Ingrese el número de filas: "))
+  columnas = int(input("Ingrese el número de columnas: "))
+
+  # Crear una matriz vacía
+  matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
+
+  # Llenar la matriz con valores ingresados por el usuario
+  for i in range(filas):
+    for j in range(columnas):
+      valor = input(f"Ingrese el valor para la posición ({i}, {j}): ")
+      matriz[i][j] = valor
+
+ 
+  mostrar_valor(matriz, filas, columnas)
+
+if __name__ == "__main__":
+  main()
